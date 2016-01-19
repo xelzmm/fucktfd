@@ -878,12 +878,14 @@ request.get(options, function(error, response, body) {
                             password = process.argv[3];
                         }
 					    print("login email [" + email + "] password [" + password + "]");
+                        password = key.encrypt(password, "base64");
+                        print("password encrypted: " + (hide ? "[hide]" : password));
 					    var login_options = {
 					    	url: "http://appfortify.cn/doLoginLink",
 					    	form: {
 					    		email: email,
 					    		fakePassword: "",
-					    		password: key.encrypt(password)
+					    		password: password
 					    	},
 					    	headers: {
 								'Referer': location,
