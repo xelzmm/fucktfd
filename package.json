@@ -1,0 +1,16 @@
+{
+  "name": "fuckpayegis",
+  "version": "1.0.0",
+  "description": "fuck payegis slide captcha",
+  "main": "fake.js",
+  "scripts": {
+    "test": "node fake.js"
+  },
+  "author": "xelz",
+  "license": "MIT",
+  "dependencies": {
+        "node-rsa": "0.2.30",
+        "request": "2.67.0",
+        "moment": "2.11.1"
+    }
+}
